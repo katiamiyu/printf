@@ -19,6 +19,8 @@ int _printf(const char *format, ...)
 				counter += _putchar(va_arg(list, int));
 			if (format[x + 1] == 's')
 				counter += print_str(va_arg(list, char*));
+			if (format[x + 1] == '%')
+				counter += _putchar('%');
 			x += 1;
 		}
 		else
